@@ -26,7 +26,7 @@ describe('Get user information: ',()=>{
 });
 
 describe('Update user information: ',()=>{
-    it('should get a bad request', (done) => {
+    it('should get a bad request when body is not sent', (done) => {
         chai.request(url)
         .put('/workExperience')
         .end(function(err,res){
