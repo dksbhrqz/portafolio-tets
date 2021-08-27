@@ -34,3 +34,5 @@ Retrieve the user information registered in the database
 # Test
 
 - npm run test
+
+The application must be running before executing this command.
