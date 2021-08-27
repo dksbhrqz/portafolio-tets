@@ -5,6 +5,8 @@ html
         h1= name
         - var img = picture
         img(src=img)
-        ul
-            each val, index in ['zero', 'one', 'two']
-                li= index + ': ' + val
+        h3 Timeline
+        ol
+            each val, index in tweets
+                li= val.text
+        a(href="https://twitter.com/dksbhrqz") Go to account

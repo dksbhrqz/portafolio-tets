@@ -9,10 +9,14 @@ app.set("views", path.join(__dirname, "views"));
 
 
 router.get("/", (req, res) => {
-    twitter.getUserInfo((result, error) => {
-        if (error) res.render("twitter_error", { title: "Portafolio", name: 'Error loading Twitter profile information' });
+    twitter.getUserInfo((profile, profileError) => {
+        if (profileError) res.render("twitter_error", { title: "Portafolio", name: 'Error loading Twitter profile information' });
 
-        res.render("index", { title: "Portafolio", name: result.name, picture: result.picture });
+        twitter.getUserLastTweets((tweets, tweetsError) => {
+            if (tweetsError) res.render("twitter_error", { title: "Portafolio", name: 'Error loading Twitter profile information' });
+
+            res.render("index", { title: "Portafolio", name: profile.name, picture: profile.picture, tweets: tweets });
+        })
         
     })
 });
