@@ -2,7 +2,9 @@ html
     head
         title= title
     body
-        h1= message
+        h1= name
+        - var img = picture
+        img(src=img)
         ul
             each val, index in ['zero', 'one', 'two']
                 li= index + ': ' + val
