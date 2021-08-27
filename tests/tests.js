@@ -14,6 +14,15 @@ describe('Get user information: ',()=>{
             done();
         });
     });
+
+    it('should get information key', (done) => {
+        chai.request(url)
+        .get('/workExperience')
+        .end(function(err,res){
+            expect(res.body).to.be.have.key('information')
+            done();
+        });
+    });
 });
 
 describe('Update user information: ',()=>{
