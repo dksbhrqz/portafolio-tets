@@ -27,9 +27,9 @@ Retrieve the user information registered in the database
 
 *Responses*
 
-Status 200: Information Updated
-Status 400: Error in information attribute from request body
-Status 500: Internal Error
+- Status 200: Information Updated
+- Status 400: Error in information attribute from request body
+- Status 500: Internal Error
 
 # Test
 
