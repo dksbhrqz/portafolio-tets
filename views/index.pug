@@ -5,8 +5,10 @@ html
         h1= name
         - var img = picture
         img(src=img)
+        h3 Work Experience
+        p= workExperience
         h3 Timeline
         ol
             each val, index in tweets
                 li= val.text
-        a(href="https://twitter.com/dksbhrqz") Go to account
+        a(href="https://twitter.com/dksbhrqz") Go to Twitter account
